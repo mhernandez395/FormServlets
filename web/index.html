@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>  
+<html xmlns="http://www.w3.org/1999/xhtml">  
+    <head>  
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  
+        <title>HTML5 y CSS Formulario de contacto</title>  
+        <link href="css/style.css" rel="stylesheet" />  
+    </head>  
+    <body>  
+        <form  class="contact_form" action="MyServlet" id="contact_form" method="post">  
+            <div>  
+                <ul>  
+                    <li>  
+                        <h2>Contactos</h2>  
+                        <span class="required_notification">* Datos requeridos</span>  
+                    </li>  
+                     
+                    <li>  
+                        <label for="nom">Nombre *:</label>  
+                        <input type="text" name="nombre" placeholder="Jose Luis" required />  
+                    </li>  
+                    
+                    <li>  
+                        <label for="edat">Edad :</label> 
+                        <input type="number" name="edad" min="18" max="99" step="1" value="18"/>
+                                             
+                    </li>
+                     <li>  
+                        <label for="pes">Peso *:</label> 
+                        <input type="number" name="peso"  min="18" max="99" step="0.01" required />
+                                             
+                    </li>
+                    <li>  
+                        <label for="email">Email *:</label>  
+                        <input type="email" name="email" required />  
+                        <span class="form_hint">Formato correcto: "name@something.com"</span>  
+                    </li> 
+                     <li>  
+                        <label for="DNI">DNI *:</label>  
+                        <input type="text" name="dni"  placeholder="12345678Z" maxlength="9" size="9" />
+                        <span class="form_hint">Formato correcto: "12345678Z"</span>  
+                    </li>
+                     <li>  
+                        <label for="sexo">Sexo *:</label>  
+                        <input type="radio" name="sexo" value="Hombre" checked /> Hombre <!--me lo invento para ver todos los casos-->
+                        <input type="radio" name="sexo" value="Mujer" /> Mujer
+                    </li>
+                     
+                    <li>  
+                        <label for="aficions">Aficiones * :</label>  
+                        <input type="checkbox" name="hobbies" value="Monta&ntilde;a" /> Monta&ntilde;a <!--atencion con los corchetes de hobbies-->
+                        <input type="checkbox" name="hobbies" value="Cine" /> Cine
+                        <input type="checkbox" name="hobbies" value="Otros" /> Otros
+                    </li>
+                    <li>  
+                        <button class="submit" type="submit" name="ok">Enviar mensaje</button>  
+                    </li>  
+                </ul>  
+            </div>  
+        </form> 
+        
+    </body>  
+</html> 
